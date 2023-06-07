@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Overpass:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body class="flex items-center justify-center flex-col bg-very_dark_blue h-screen font-overpass">
+  <section>
+    <div class="animate-slide-in"></div>
+    <div id="alert" class="absolute bg-red-200 flex top-5 right-5 h-20 space-x-5 items-center border-l-4 border-red-800 rounded-lg overflow-hidden hidden">
+      <i class="fa-solid fa-circle-exclamation text-red-700 text-3xl pl-5 animate-bounce animate-pulse"></i>
+      <p class="text-red-800 font-semibold">Please select the rating</p>
+      <button class="h-full bg-red-400 w-10" id="close-btn"><i class="fa-solid fa-xmark text-red-800 text-center text-lg font-extrabold"></i></button>
+    </div>
+  </section>
+  <!-- Rating state start -->
+  <main class="bg-dark_blue rounded-2xl p-5 mx-5 max-w-[370px]">
+    <section class="flex flex-col">
+      <div class="flex flex-col space-y-4" id="initial-page">
+        <div class="bg-background rounded-full w-8 h-8 flex items-center justify-center">
+          <img src="images/icon-star.svg" alt="star-icon" class="h-3 w-3">
+        </div>
+        <h1 class="text-white_mod text-2xl font-bold">How did we do?</h1>
+        <p class="text-light_grey text-md">Please let us know how we did with your support request. All feedback is
+          appreciated
+          to help us improve our offering!</p>
+        <ul class="text-light_grey flex justify-between">
+          <li><button
+              class="rounded-full bg-background h-10 w-10 flex items-center justify-center hover:bg-light_grey hover:text-white_mod focus:bg-orange_mod focus:text-white_mod">1</button>
+          </li>
+          <li><button
+              class="rounded-full bg-background h-10 w-10 flex items-center justify-center hover:bg-light_grey hover:text-white_mod focus:bg-orange_mod focus:text-white_mod">2</button>
+          </li>
+          <li><button
+              class="rounded-full bg-background h-10 w-10 flex items-center justify-center hover:bg-light_grey hover:text-white_mod focus:bg-orange_mod focus:text-white_mod">3</button>
+          </li>
+          <li><button
+              class="rounded-full bg-background h-10 w-10 flex items-center justify-center hover:bg-light_grey hover:text-white_mod focus:bg-orange_mod focus:text-white_mod">4</button>
+          </li>
+          <li><button
+              class="rounded-full bg-background h-10 w-10 flex items-center justify-center hover:bg-light_grey hover:text-white_mod focus:bg-orange_mod focus:text-white_mod">5</button>
+          </li>
+        </ul>
+        <button id="submit-btn"
+          class="text-white_mod bg-orange_mod rounded-full h-8 active:bg-white_mod active:text-orange_mod">SUBMIT</button>
+      </div>
+
+      <div class="flex flex-col space-y-4 items-center hidden" id="after-page">
+        <img src="images/illustration-thank-you.svg" alt="Thank-you illustration" class="w-1/2">
+        <p class="bg-background text-orange_mod rounded-full h-7 px-3 align-middle">You selected <span></span> out of 5
+        </p>
+        <h1 class="text-2xl font-bold text-white_mod text-center">Thank you!</h1>
+        <p class="text-center text-light_grey">We appreciate you taking the time to give a rating. If you ever need more
+          support, don't hesitate to get in touch!</p>
+        <button class="text-white_mod bg-orange_mod rounded-full h-8 active:bg-white_mod active:text-orange_mod px-5"
+          id="rate-again">Rate Again!</button>
+      </div>
+      </div>
+    </section>
+  </main>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.linkedin.com/in/niklaus-mikealson/">Niklaus M.</a>.
+  </div>
+  <script src="./index.js"></script>
+</body>
+
+</html>
